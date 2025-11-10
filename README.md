@@ -14,7 +14,6 @@
 - Validates the raw Open Library `docs` using Joi.
 - Picks only the fields I care about (`key`, `title`, `author_name`, `first_publish_year`, `isbn`).
 - Maps them to my internal shape: `ol_key`, `title`, `author`, `first_publish_year`, `isbn`.
-- This is the “validate the retrieved data” part of the assignment.
 
 ### 4. `src/services/importBooks.js`
 - Orchestrates Part 1:
@@ -36,7 +35,6 @@
   - `PUT /api/books/:id`
   - `DELETE /api/books/:id`
 - All of these read/write the same MongoDB collection, so CRUD is persisted.
-- This is Part 2 of the assignment.
 
 ### 7. `src/app.js`
 - Creates the Express app.
@@ -48,4 +46,4 @@
 ### 8. `src/docs/swagger.json`
 - OpenAPI/Swagger definition for the REST API.
 - Documents the CRUD endpoints so they can be viewed/tested at `http://localhost:3000/api-docs`.
-- This fulfills the “API Documentation” requirement.
+<img width="975" height="204" alt="image" src="https://github.com/user-attachments/assets/f935522a-939e-4c93-aa78-ab3ecd4cf229" />
