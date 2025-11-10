@@ -1,0 +1,112 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Book API",
+    "version": "1.0.0",
+    "description": "CRUD API for books imported from Open Library"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/api/books": {
+      "get": {
+        "summary": "Get all books",
+        "responses": {
+          "200": {
+            "description": "A list of books"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a book",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/api/books/{id}": {
+      "get": {
+        "summary": "Get a book by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK" },
+          "404": { "description": "Not found" }
+        }
+      },
+      "put": {
+        "summary": "Update a book by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/BookInput" }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Updated" },
+          "404": { "description": "Not found" }
+        }
+      },
+      "delete": {
+        "summary": "Delete a book",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "204": { "description": "Deleted" },
+          "404": { "description": "Not found" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BookInput": {
+        "type": "object",
+        "properties": {
+          "ol_key": { "type": "string", "example": "/works/OL82563W" },
+          "title": { "type": "string", "example": "The Hobbit" },
+          "author": { "type": "string", "example": "J.R.R. Tolkien" },
+          "first_publish_year": { "type": "integer", "example": 1937 },
+          "isbn": { "type": "string", "example": "9780261103344" }
+        }
+      }
+    }
+  }
+}
