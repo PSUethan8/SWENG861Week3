@@ -47,3 +47,8 @@
 - OpenAPI/Swagger definition for the REST API.
 - Documents the CRUD endpoints so they can be viewed/tested at `http://localhost:3000/api-docs`.
 <img width="975" height="204" alt="image" src="https://github.com/user-attachments/assets/f935522a-939e-4c93-aa78-ab3ecd4cf229" />
+<img width="1423" height="355" alt="image" src="https://github.com/user-attachments/assets/05afdaed-d807-4738-9482-0aa597739a79" />
+<img width="1428" height="593" alt="image" src="https://github.com/user-attachments/assets/a397c38b-fcd8-4a23-a15b-431e1dc04940" />
+<img width="1425" height="494" alt="image" src="https://github.com/user-attachments/assets/daed084f-5c8f-407b-b0a4-dadb8d89763c" />
+<img width="1429" height="731" alt="image" src="https://github.com/user-attachments/assets/094979e1-6e55-4de5-890a-77bb37a86d8b" />
+<img width="1426" height="496" alt="image" src="https://github.com/user-attachments/assets/5cff0b34-938c-4268-b655-78321789d52d" />
